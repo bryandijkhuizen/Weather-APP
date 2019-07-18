@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="./css/navStyle.css" rel="stylesheet">
+
+    <style>
+        .logo,
+        .projects,
+        .equipment,
+        .contact {
+            margin-top: 0.5%;
+        }
+
+        .topnav a {
+            color: black;
+            text-shadow: none;
+        }
+
+        table {
+            font-family: Roboto;
+
+        }
+
+        a {
+            color: black;
+            text-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a class="logo" href="/" class="active">Bryan Dijkhuizen</a>
+            <a class="projects" href="/">Home</a>
+            <a class="projects" href="/projects">Projects</a>
+            <a class="equipment" href="/equipment">Equipment</a>
+            <a class="contact" href="/contact">Contact</a>
+            <a href="javascript:void(0);" style="font-size:15px; scroll-behavior: smooth;" class="icon"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+    </nav>
+    <div class="container">
+        <fieldset style="margin-top: 5%;">
+            <center>
+                <form action="/" method="post">
+                    <input style="margin-bottom: 25px; width: 35%;" class="form-control" name="city" type="text"
+                        class="ghost-input" placeholder="Enter a City" required>
+                    <input class="btn btn-primary" type="submit" class="ghost-button" value="Get Weather">
+                </form>
+                <br>
+                <b>
+                    <% if(weather !== null){ %>
+                    <p><%= weather %></p>
+                    <% } %>
+
+                    <% if(error !== null){ %>
+                    <p><%= error %></p>
+                    <% } %>
+                </b>
+            </center>
+        </fieldset>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    background: url('https://i.ibb.co/q5kWj7v/IMG-0405-2x.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+nav {}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.logo {
+    float: left;
+    transition: all 1s ease;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 10%;
+    margin-top: 2.5%;
+}
+
+.home {
+    float: left;
+    transition: all 1s ease;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 2.5%;
+}
+
+.projects {
+    float: left;
+    transition: all 1s ease;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 2.5%;
+}
+
+.equipment {
+    float: left;
+    transition: all 1s ease;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 2.5%;
+}
+
+
+
+.contact {
+    float: right;
+    transition: all 1s ease;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 2.5%;
+    margin-right: 10%;
+}
+
+.topnav a:hover {
+    background: rgba(194, 194, 194, 0.336);
+}
+
+
+.topnav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 120%;
+}
+
+.topnav {
+    overflow: hidden;
+
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+
+}
+
+
+
+.topnav .icon {
+    display: none;
+}
+
+.topnav .contact {
+    float: right;
+}
+
+
+@media screen and (max-width: 900px) {
+
+
+
+    .contact {
+        float: left;
+    }
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+
+}
